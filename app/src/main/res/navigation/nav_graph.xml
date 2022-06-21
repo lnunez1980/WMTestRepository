@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.wireless.mobile.test.ui.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/to_detailBottomSheet"
+            app:destination="@id/modalBottomSheet" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/modalBottomSheet"
+        android:name="com.wireless.mobile.test.ui.bottomsheet.DetailBottomSheet"
+        android:label="ModalBottomSheet" >
+
+        <argument
+            android:name="code_cioc"
+            app:argType="string" />
+        <argument
+            android:name="borders"
+            app:argType="string[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+    </dialog>
+</navigation>

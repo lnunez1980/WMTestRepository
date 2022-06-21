@@ -1,0 +1,57 @@
+// All project dependencies are here with their respective version number
+ext {
+
+    // RxJava
+    rxAndroidVersion = "2.1.1"
+    rxJavaVersion = "2.2.21"
+
+    // Gradle
+    gradleVersion = '7.0.2'
+    kotlinGradleVersion = '1.5.30'
+
+    // Dagger
+    daggerVersion = '2.40.5'
+    daggerAndroidVersion = '2.40.5'
+
+    // Support Libraries
+    ktxVersion = '1.5.0'
+    materialVersion = '1.6.1'
+    appCompatVersion = '1.4.2'
+    constraintLayoutVersion = "2.1.4"
+
+    // Networking
+    gsonVersion = "2.8.9"
+    okhttpVersion = "4.9.0"
+    retrofitVersion = "2.9.0"
+
+    //Epoxy
+    epoxyVersion = "4.6.3"
+
+    // Lifecycle
+    lifecycleVersion = '2.4.1'
+    lifecycleExtensions = "2.2.0"
+
+    // Navigation
+    navigationVersion = '2.4.2'
+
+    // Image handling
+    glideVersion = "4.11.0"
+
+    // Lottie
+    lottieVersion = "3.4.0"
+
+    // Room
+
+    roomVersion = "2.4.2"
+
+    // Tests
+    testVersion = "1.0.2"
+    testCoreVersion = "1.4.0"
+    jUnitVersion = "4.13.2"
+    mockitoVersion = "4.6.1"
+    testArchCoreVersion = "2.1.0"
+    espressoVersion = "3.0.2"
+    mockWebServiceVersion = "4.9.3"
+    idlingResourceVersion = "3.4.0"
+    lottieVersion = "5.0.3"
+}
