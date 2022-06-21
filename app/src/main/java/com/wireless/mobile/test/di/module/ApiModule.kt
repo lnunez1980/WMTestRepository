@@ -11,7 +11,7 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun provideCountriesApi(retrofit: Retrofit) : ServicesApi {
+    fun provideCountriesApi(retrofit: Retrofit): ServicesApi {
         return retrofit.create(ServicesApi::class.java)
     }
 }

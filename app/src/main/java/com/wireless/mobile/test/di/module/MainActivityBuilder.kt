@@ -14,6 +14,6 @@ abstract class MainActivityBuilder {
         ]
     )
 
-    abstract fun bindMainActivity() : MainActivity
+    abstract fun bindMainActivity(): MainActivity
 
 }

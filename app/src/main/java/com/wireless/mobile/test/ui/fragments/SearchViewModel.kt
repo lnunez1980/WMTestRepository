@@ -68,16 +68,17 @@ class SearchViewModel @Inject constructor(
     @VisibleForTesting(otherwise = VisibleForTesting.PACKAGE_PRIVATE)
     fun getCountriesByName(names: String) {
         setLoader(true)
-        compositeDisposable.add(repository.getCountriesByName(names)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({ countries ->
-                setLoader(false)
-                _countryActions.value = CountriesActions.CountriesFound(countries, true)
-            }, {
-                setLoader(false)
-                _countryActions.value = CountriesActions.OnError(it)
-            })
+        compositeDisposable.add(
+            repository.getCountriesByName(names)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ countries ->
+                    setLoader(false)
+                    _countryActions.value = CountriesActions.CountriesFound(countries, true)
+                }, {
+                    setLoader(false)
+                    _countryActions.value = CountriesActions.OnError(it)
+                })
         )
     }
 
@@ -89,7 +90,7 @@ class SearchViewModel @Inject constructor(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doFinally {
-                if (countries.isEmpty().not()){
+                if (countries.isEmpty().not()) {
                     setLoader(false)
                     _countryActions.value = CountriesActions.CountriesFound(countries)
                 }

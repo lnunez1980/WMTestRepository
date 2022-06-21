@@ -12,7 +12,7 @@ class GlideModule {
 
     @Provides
     @Singleton
-    fun provideGlideInstance(application: Application) : RequestManager {
+    fun provideGlideInstance(application: Application): RequestManager {
         return Glide.with(application)
     }
 }

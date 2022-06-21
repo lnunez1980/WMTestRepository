@@ -32,7 +32,7 @@ class DetailViewModel @Inject constructor(
     fun getCountryInfo(code: String, borders: Array<String>?) {
         if (_countryActions.value == null) {
             setLoader(true)
-            val countryBorders = borders?.joinToString().orEmpty().replace(" ","")
+            val countryBorders = borders?.joinToString().orEmpty().replace(" ", "")
             disposable = Observable.zip(
                 repository.getCountryInfo(code),
                 repository.getCountriesByCodes(countryBorders),
@@ -44,7 +44,8 @@ class DetailViewModel @Inject constructor(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ countryInfo ->
                     setLoader(false)
-                    _countryActions.value = CountryActions.CountryFound(countryInfo.country, countryInfo.borders)
+                    _countryActions.value =
+                        CountryActions.CountryFound(countryInfo.country, countryInfo.borders)
                 }, {
                     _countryActions.value = CountryActions.OnError(it)
                 })

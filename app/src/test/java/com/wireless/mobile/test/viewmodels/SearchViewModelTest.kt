@@ -86,7 +86,8 @@ class SearchViewModelTest {
 
     @Test
     fun `get country by name from api and receive error`() {
-        Mockito.`when`(repository.getCountriesByName("GER")).thenReturn(Observable.error(Throwable()))
+        Mockito.`when`(repository.getCountriesByName("GER"))
+            .thenReturn(Observable.error(Throwable()))
 
         viewModel.getCountriesByName("GER")
         viewModel.countryActions.observeForever(eventObserver)

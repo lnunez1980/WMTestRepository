@@ -112,7 +112,7 @@ class SearchFragment : DaggerFragment(), CountryCardListener,
         })
     }
 
-    private fun showToast(message: String){
+    private fun showToast(message: String) {
         val toast = Snackbar.make(this.requireView(), message, Snackbar.LENGTH_SHORT)
         val layoutParams = ActionBar.LayoutParams(toast.view.layoutParams)
 

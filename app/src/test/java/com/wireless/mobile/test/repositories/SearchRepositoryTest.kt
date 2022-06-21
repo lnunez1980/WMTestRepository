@@ -64,7 +64,8 @@ class SearchRepositoryTest {
     @Test
     fun `on get countries by name from api`() {
 
-        Mockito.`when`(searchApi.getCountriesByName("Germany")).thenReturn(Observable.just(countries))
+        Mockito.`when`(searchApi.getCountriesByName("Germany"))
+            .thenReturn(Observable.just(countries))
 
         val testSingle = searchRepository.getCountriesByName("Germany").test()
 
@@ -102,7 +103,8 @@ class SearchRepositoryTest {
     @Test
     fun `on get countries by code from api and receive error`() {
 
-        Mockito.`when`(searchApi.getCountriesByCodes("GER")).thenReturn(Observable.error(Throwable()))
+        Mockito.`when`(searchApi.getCountriesByCodes("GER"))
+            .thenReturn(Observable.error(Throwable()))
 
         val testSingle = searchRepository.getCountriesByCodes("GER").test()
 
@@ -114,7 +116,8 @@ class SearchRepositoryTest {
     @Test
     fun `on get countries by name from api and receive error`() {
 
-        Mockito.`when`(searchApi.getCountriesByName("Germany")).thenReturn(Observable.error(Throwable()))
+        Mockito.`when`(searchApi.getCountriesByName("Germany"))
+            .thenReturn(Observable.error(Throwable()))
 
         val testSingle = searchRepository.getCountriesByName("Germany").test()
 

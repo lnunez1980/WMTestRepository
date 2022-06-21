@@ -62,9 +62,12 @@ class CountryCardView @JvmOverloads constructor(
         binding.countryNameTextView.text = country.name.official
         binding.populationTextView.text =
             context.getString(R.string.population, context.toAmount(country.population))
-        binding.capitalTextView.text = context.getString(R.string.capital, country.capital?.firstOrNull().orEmpty())
-        binding.languageTextView.text =  context.getString(R.string.language, country.languages?.idiom.orEmpty())
-        binding.currencyTextView.text =  context.getString(R.string.currency, country.currencies?.currency?.name.orEmpty())
+        binding.capitalTextView.text =
+            context.getString(R.string.capital, country.capital?.firstOrNull().orEmpty())
+        binding.languageTextView.text =
+            context.getString(R.string.language, country.languages?.idiom.orEmpty())
+        binding.currencyTextView.text =
+            context.getString(R.string.currency, country.currencies?.currency?.name.orEmpty())
         imageLoader?.load(country.flag.png)
             ?.transform(RoundedCorners(context.resources.getDimensionPixelSize(R.dimen.radius_6)))
             ?.transition(DrawableTransitionOptions.with(DrawableAlwaysCrossFadeFactory()))

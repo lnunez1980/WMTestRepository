@@ -28,12 +28,22 @@ fun View.addRippleForeground() {
 fun TextView.setDrawableLeft(drawableRes: Drawable?, @ColorInt colorRes: Int) {
     val drawables = this.compoundDrawables
     if (colorRes == 0) {
-        this.setCompoundDrawablesWithIntrinsicBounds(drawableRes, drawables[1], drawables[2], drawables[3])
+        this.setCompoundDrawablesWithIntrinsicBounds(
+            drawableRes,
+            drawables[1],
+            drawables[2],
+            drawables[3]
+        )
     } else {
         drawableRes?.let {
             val wrappedDrawable = DrawableCompat.wrap(it).mutate()
             DrawableCompat.setTint(wrappedDrawable, colorRes)
-            this.setCompoundDrawablesWithIntrinsicBounds(wrappedDrawable, drawables[1], drawables[2], drawables[3])
+            this.setCompoundDrawablesWithIntrinsicBounds(
+                wrappedDrawable,
+                drawables[1],
+                drawables[2],
+                drawables[3]
+            )
         }
     }
 }
@@ -41,12 +51,22 @@ fun TextView.setDrawableLeft(drawableRes: Drawable?, @ColorInt colorRes: Int) {
 fun TextView.setDrawableRight(drawableRes: Drawable?, @ColorInt colorRes: Int) {
     val drawables = this.compoundDrawables
     if (colorRes == 0) {
-        this.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], drawableRes, drawables[3])
+        this.setCompoundDrawablesWithIntrinsicBounds(
+            drawables[0],
+            drawables[1],
+            drawableRes,
+            drawables[3]
+        )
     } else {
         drawableRes?.let {
             val wrappedDrawable = DrawableCompat.wrap(it).mutate()
             DrawableCompat.setTint(wrappedDrawable, colorRes)
-            this.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], wrappedDrawable, drawables[3])
+            this.setCompoundDrawablesWithIntrinsicBounds(
+                drawables[0],
+                drawables[1],
+                wrappedDrawable,
+                drawables[3]
+            )
         }
     }
 }

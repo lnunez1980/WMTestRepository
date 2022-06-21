@@ -7,7 +7,9 @@ import com.bumptech.glide.request.transition.Transition
 import com.bumptech.glide.request.transition.TransitionFactory
 
 class DrawableAlwaysCrossFadeFactory : TransitionFactory<Drawable> {
-    private val resourceTransition: DrawableCrossFadeTransition = DrawableCrossFadeTransition(300, true)
+    private val resourceTransition: DrawableCrossFadeTransition =
+        DrawableCrossFadeTransition(300, true)
+
     override fun build(dataSource: DataSource?, isFirstResource: Boolean): Transition<Drawable> {
         return resourceTransition
     }
