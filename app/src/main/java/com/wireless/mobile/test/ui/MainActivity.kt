@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.wireless.mobile.test.R
 import com.wireless.mobile.test.databinding.ActivityMainBinding
-import dagger.android.AndroidInjection.inject
-import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 

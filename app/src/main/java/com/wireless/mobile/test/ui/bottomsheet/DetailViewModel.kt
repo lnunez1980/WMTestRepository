@@ -10,7 +10,6 @@ import com.wireless.mobile.test.api.models.CountryInfo
 import com.wireless.mobile.test.ui.repositories.SearchRepository
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers

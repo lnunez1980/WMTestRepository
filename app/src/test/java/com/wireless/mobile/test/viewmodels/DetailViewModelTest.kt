@@ -7,8 +7,6 @@ import com.wireless.mobile.test.api.models.Flag
 import com.wireless.mobile.test.api.models.Name
 import com.wireless.mobile.test.ui.bottomsheet.CountryActions
 import com.wireless.mobile.test.ui.bottomsheet.DetailViewModel
-import com.wireless.mobile.test.ui.fragments.CountriesActions
-import com.wireless.mobile.test.ui.fragments.SearchViewModel
 import com.wireless.mobile.test.ui.repositories.SearchRepository
 import io.reactivex.Observable
 import io.reactivex.android.plugins.RxAndroidPlugins

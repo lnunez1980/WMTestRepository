@@ -7,11 +7,9 @@ import com.wireless.mobile.test.di.module.AppModule
 import com.wireless.mobile.test.di.module.GlideModule
 import com.wireless.mobile.test.di.module.MainActivityBuilder
 import com.wireless.mobile.test.di.module.RetrofitModule
-import com.wireless.mobile.test.ui.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 

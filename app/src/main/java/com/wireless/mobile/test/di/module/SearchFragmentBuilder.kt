@@ -1,7 +1,6 @@
 package com.wireless.mobile.test.di.module
 
 import androidx.lifecycle.ViewModel
-import com.wireless.mobile.test.api.ServicesApi
 import com.wireless.mobile.test.factories.ViewModelKey
 import com.wireless.mobile.test.ui.fragments.SearchFragment
 import com.wireless.mobile.test.ui.fragments.SearchViewModel
@@ -11,7 +10,6 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
-import javax.inject.Singleton
 
 @Module
 abstract class SearchFragmentBuilder {
